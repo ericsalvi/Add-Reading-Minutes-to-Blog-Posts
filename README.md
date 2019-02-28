@@ -18,15 +18,15 @@ The above code is the basis of how I came up with this snippet. I saw popular so
 
 ## The Updated Code
 ```
-   {% set initialPostWords = content.post_body|wordcount %}
-   {% set calculatedPostWords = (initialPostWords/100) * 100 %}
-   {% set finishedPostWords = calculatedPostWords|divide(300)|round(2) %}
-   {% set number = finishedPostWords|round %}
-   {% if number < 1 %}
+{% set initialPostWords = content.post_body|wordcount %}
+{% set calculatedPostWords = (initialPostWords/100) * 100 %}
+{% set finishedPostWords = calculatedPostWords|divide(300)|round(2) %}
+{% set number = finishedPostWords|round %}
+{% if number < 1 %}
  
-   {% else %}
-   {{ finishedPostWords|round }} minute read
-   {% endif %}
+{% else %}
+  {{ finishedPostWords|round }} minute read
+{% endif %}
 ```
 Add these 8 lines of code in place of the initial one. What this will do is always round to the nearest 100. There also is a condition that if the final number is less than 1, It will not display anything. I felt that seeing `0 minute read` is not good for business. 
 
