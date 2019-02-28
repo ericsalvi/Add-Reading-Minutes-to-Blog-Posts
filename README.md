@@ -9,7 +9,7 @@ To display the reading minutes for each of your blog posts, you will want to add
 The first part, `content.post_body` is gathering all of the information from the post body. Pretty straightforward. Then appending the filter `wordcount` is telling us to get the total number of words in the post body. After that I then added `divide(300)` which will divide the wordcount by 300. Through seaching the Interent I found that the average adult human reads approximately 300 words per minute.
 
 ## The Why
-The above code is the basis of how I came up with this snippet. I saw popular social platforms achieving this type of feature and wanted to replicate it in HubSpot. I had a good grasp on HubL for the blog markup and knew that if I were to come up with this same feature in HubSpot, I should be able to do it through HubL filters. Through testing I realized that it was not rounding properly so an 899 word count for a blog post would ideally give me a result of 3 (899/300) but in actuallity it yeilded 2. I knew something was wrong. I had to come up with a better solution from this base code.
+The above code is the basis of how I came up with this snippet. I saw popular social platforms achieving this type of feature and wanted to replicate it in HubSpot. I had a good grasp on HubL for the blog markup and knew that if I were to come up with this same feature in HubSpot, I should be able to match it through HubL filters. However, through testing I realized that it was not rounding properly so an 899 word count for a blog post on paper would give us a result of 3 (899/300) but in actuallity it yeilded 2. I knew something was wrong. I had to come up with a better solution using my base code.
 
 ## The Updated Code
 ```
@@ -23,7 +23,7 @@ The above code is the basis of how I came up with this snippet. I saw popular so
    {{ finishedPostWords|round }} minute read
    {% endif %}
 ```
-Add these 8 lines of code in place of the initial one. What this will do is always round to the nearest 100. There also is a condition that if the final number is less than 1, I decided not to display anything. I felt that seeing `0 minute read` is not good for business. 
+Add these 8 lines of code in place of the initial one. What this will do is always round to the nearest 100. There also is a condition that if the final number is less than 1, It will not display anything. I felt that seeing `0 minute read` is not good for business. 
 
 The only way you could get a 0 in these results would be if you have less than 150 words in your post or you have an infographic or video instead of text.
 
