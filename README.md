@@ -1,5 +1,10 @@
 # Add Reading Minutes to Blog Posts
 A way to adding the reading minutes for each of your HubSpot blog posts.
+
+<p align="center">
+  <img src="https://github.com/ericsalvi/Add-Reading-Minutes-to-Blog-Posts/blob/master/images/reading-minutes-blog-post.png?raw=true" width="222" title="Reading Minutes">
+</p>
+
 ## The Instructions
 To display the reading minutes for each of your blog posts, you will want to add
 
