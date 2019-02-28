@@ -32,4 +32,8 @@ Add these 8 lines of code in place of the initial one. What this will do is alwa
 
 The only way you could get a 0 in these results would be if you have less than 150 words in your post or you have an infographic or video instead of text.
 
+### Please Note
+
+This will require you to make it look nice by using CSS. This snippet is only to get the foundation code present on your blog.
+
 My original article was published on the [HubSpot Community](https://community.hubspot.com/t5/Share-Your-Work/How-to-Add-Reading-Minutes-to-Blog-Posts/m-p/9691#M30). 
