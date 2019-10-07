@@ -18,7 +18,7 @@ The above code is the basis of how I came up with this snippet. I saw popular so
 
 ## The Updated Code
 ```
-{% set initialPostWords = content.post_body|wordcount %}
+{% set initialPostWords = content.post_body|striptags|wordcount %}
 {% set calculatedPostWords = (initialPostWords/100) * 100 %}
 {% set finishedPostWords = calculatedPostWords|divide(300)|round(2) %}
 {% set number = finishedPostWords|round %}
